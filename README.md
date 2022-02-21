@@ -1,0 +1,1 @@
+![imagen pagina](./imgs/fastFood.png)

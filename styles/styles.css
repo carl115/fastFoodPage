@@ -184,6 +184,21 @@ html {
     cursor: pointer;
 }
 
+/* BTN-MENU */
+.header .btn-menu {
+    background: var(--color-1);
+    width: 60px;
+    height: 60px;
+    color: #ffffff;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    border: none;
+    border-radius: 6px;
+}
+/*-/-*/
+
 .header h1 {
     font-size: 60px;
     margin: 100px; 
@@ -218,9 +233,13 @@ html {
 
 .products .cont .product {
     width: 350px;
-    height: 400px;
-    padding: 35px 75px;
-    margin: 20px 45px;
+    height: auto;
+    padding: 20px 0;
+    margin: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     text-align: center;
     color: var(--color-und);
     border: solid 1px var(--color-und);
@@ -512,5 +531,224 @@ html {
 .button-home .fa-sort-up {
     font-size: 25px;
     color: var(--color-1);
+}
+/*-/-*/
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .header nav {
+        justify-content: center;
+    }
+
+    .header nav .img-1 {
+        display: none;
+    }
+
+    .products {
+        height: auto;
+    }
+
+    .products .cont {
+        padding: 30px 0;
+        /*flex-direction: column;*/
+    }
+
+    .products .cont .product {
+        width: 300px;
+    }
+
+    .products .cont .product figure {
+        width: 160px;
+        height: 160px;
+    }
+
+    .about-us {
+        height: auto;
+    }
+
+    .about-us .us {
+        align-items: center;
+    }
+
+    .about-us .us .us-info {
+        padding: 0 50px;
+    }
+
+    .about-us .us .persons {
+        padding: 0;
+    }
+
+    .contact-us {
+        height: auto;
+    }
+
+    .contact-us .contact {
+        padding: 30px 0;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .contact-us .contact .map {
+        border: none;
+    }
+
+    .contact-us .contact form {
+        padding: 0 75px;
+        border: none;
+    }
+
+    .contact-us .contact form .cont-form input {
+        width: 100%;
+    }
+
+    .contact-us .contact form textarea {
+        width: 100%;
+    }
+
+    .contact-us .contact form button {
+        width: 100%;
+    }
+
+    .more {
+        height: auto;
+    }
+
+    .more .cont {
+        padding: 30px 0;
+    }
+
+    .more .cont .img-more {
+        padding: 45px 0;
+    }
+
+    .more .cont .text-more {
+        padding: 0 50px;
+    }
+
+    .footer {
+        height: auto;
+        padding: 100px 20px;
+    }
+}
+
+@media (max-width: 425px) {
+    .header {
+        height: 350px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header nav {
+        width: 55%;
+        height: 100vh;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -250px;
+        border: 1px solid #ffffff;
+        transition: all 1s;
+    }
+
+    .header nav.active {
+        right: 0;
+    }
+
+    .header nav a {
+        margin: 20px 0;
+    }
+
+    .header nav a#btn-search {
+        display: none;
+    }
+
+    .header .btn-menu {
+        display: flex;
+        position: fixed;
+        top: 5px;
+        right: 5px;
+    }
+
+    .header h1 {
+        margin: 0;
+        font-size: 40px;
+    }
+
+    .products .cont {
+        flex-direction: column;
+    }
+
+    .products .cont .product {
+        margin: 20px 0;
+    }
+
+    .about-us .us {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-us .contact form {
+        width: 100%;
+    }
+
+    .more .cont {
+        grid-template-columns: 1fr;
+    }
+
+    .more .cont .img-more {
+        padding: 30px 0;
+    }
+
+    .footer {
+        padding: 50px 0;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer .info-company {
+        display: none;
+    }
+
+    .footer .more-info {
+        margin: 0;
+        grid-template-columns: 1fr;
+    }
+
+    .footer .more-info .content {
+        margin: 20px 0;
+    }
+
+    .button-home {
+        display: none;
+    }
+}
+
+@media (max-width: 375px) {
+    .header h1 {
+        font-size: 35px;
+    }
+
+    .contact-us .contact .map {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .contact-us .contact .map iframe {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media (max-width: 320px) {
+    .header h1 {
+        font-size: 30px;
+    }
+
+    .about-us .us .us-info {
+        padding: 0 20px;
+    }
+
+    .footer {
+        padding: 0 20px;
+    }
 }
 /*-/-*/
